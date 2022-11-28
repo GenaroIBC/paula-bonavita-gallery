@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 import styled from "styled-components";
 
 const STPicture = styled.article`
@@ -38,6 +38,10 @@ export function Picture({ src, title }) {
         <h4>Técnica</h4>
         <h4>Descripción</h4>
       </div>
+
+      <Link href={`arte-plastico/${title.toLowerCase().replace(" ", "-")}`}>
+        Ver Coleccion
+      </Link>
     </STPicture>
   );
 }

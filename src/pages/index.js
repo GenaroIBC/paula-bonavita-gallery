@@ -5,15 +5,19 @@ import { v4 as uuid } from "uuid";
 const PICTURES = [
   {
     src: "/img/cuadro-1.jpg",
-    title: "Cuadro o=une"
+    title: "Retratos"
   },
   {
     src: "/img/cuadro-2.jpg",
-    title: "Cuadro o=une"
+    title: "Naturaleza"
   },
   {
     src: "/img/cuadro-3.jpg",
-    title: "Cuadro o=une"
+    title: "Abstracto"
+  },
+  {
+    src: "/img/cuadro-3.jpg",
+    title: "Arte optico"
   }
 ];
 
@@ -24,12 +28,21 @@ const STPictures = styled.section`
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 `;
 
-export default function Index() {
+export default function Home() {
   return (
-    <STPictures>
-      {PICTURES.map(pic => (
-        <Picture key={uuid()} {...pic} />
-      ))}
-    </STPictures>
+    <>
+      <h1>Hola, Soy Paula Bonavita, bienvenid@ a mi blog(?)</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi error
+        iure mollitia, accusantium commodi ab numquam aperiam placeat illo
+        dolore culpa incidunt voluptatibus fugiat quidem quas earum ad ducimus
+        perferendis?
+      </p>
+      <STPictures>
+        {PICTURES.map(pic => (
+          <Picture key={uuid()} {...pic} />
+        ))}
+      </STPictures>
+    </>
   );
 }
