@@ -1,0 +1,22 @@
+.collectionItem {
+  display: flex;
+  background-color: rgba(182, 0, 0);
+  border-radius: 10px;
+  padding: 1rem;
+  justify-content: space-between;
+  transition: 0.4s transform;
+  cursor: pointer;
+}
+
+.collectionItem:hover {
+  background-color: rgb(141, 0, 0);
+  transform: scale(1.05);
+}
+
+.collectionItem__title {
+  font-size: 1.7rem;
+}
+
+.collectionItem__picture {
+  width: 200px;
+}
